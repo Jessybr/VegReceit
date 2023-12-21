@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+:root {
+  --verde: #22783C;
+  --fonte: 'Just Another Hand', cursive;
+  --marromEsc: #331E06;
+  --laranjaopc: #FCD581;
+  --marromCla: #5B3A19;
+  --tamDes: 70%;
+  --tamMob: 85%;
+  --laranjaCla: #FFF8E8;
+}
+
+body{
+  background-image: url('/images/vector1.png');
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+}
+
+.parallax-image {
+  background-image: url('/vegab.jpg');
+}
+
+.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.titulo1 {
+  width: 221px;
+  text-shadow: 5px 4px 0px #ffffff;
+  font-family: var(--fonte);
+  color: var(--verde);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.3px;
+  margin-left: 35px;
+}
+
+.contTitulo{
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+.content{
+  color: #DB7F67;
+  text-align: justify;
+  font-family: var(--fonte);
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.12px;
+  width: var(--tamMob);
+}
+
+main{
+  width: 100%;
+  margin-top: 4%;
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+main hr{
+  width: 74%;
+  background-color: var(--marromEsc);
+  height: 3px;
+}
+
+.topicos{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topicos a{
+  text-align: center;
+  font-family: var(--fonte);
+  font-size: 34px;
+  width: 150px;
+  background-color: var(--laranjaopc);
+  margin: 15px;
+}
+
+.cardCont{
+  width: var(--tamMob);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  overflow: auto;
+}
+
+.card{
+  width: 229px;
+  height: 324px;
+  flex-shrink: 0;
+  border-radius: 35px;
+  background: var(--laranjaCla);
+  border: none;
+  margin: 20px;
+}
+
+.card img{
+  width: 180px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.card h3{
+  color: var(--marromCla);
+  text-align: center;
+  font-family: var(--fonte);
+  font-size: 31.925px;
+}
+
+.botao img{
+  width: 27.158px;
+  height: 26.55px;
+  border-radius: 0%;
+}
+
+.botao{
+  width: 155px;
+  background-color: var(--laranjaopc);
+  border-radius: 9px;
+  padding: 0 5px 0 5px;
+}
+
+.botao > a, a:visited, a:active{
+  color: var(--marromCla);
+  font-size: 29px;
+  text-decoration: none;
+}
+
+.botao a img{
+  margin-left: 70px;
+}
+
+.card .cardC1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+.card .cardC2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+}
+.card .cardC3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+}
+
+@media (min-width: 768px) {
+  .titulo1 {
+    font-size: 115px;
+    width: var(--tamDes);
+  }
+
+  .topicos{
+    width: var(--tamDes); 
+    justify-content: space-between;
+  }
+
+  .topicos a{
+    width: 200px;
+    font-size: 2.5rem;
+  }
+
+  .content{
+    width: var(--tamDes);
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .cardCont{
+    width: var(--tamDes);
+    justify-content: space-between;
+  }
+
+  .card{
+    width: 329px;
+    height: 380px;
+    padding: 5px 0;
+  }
+
+  .card img{
+    width: 279px;
+    height: auto;
+  }
+
+  .card .icone{
+    width: 40px;
+    height: auto;
+  }
+
+  .card .botao a{
+    font-size: 2rem;
+  }
+
+  .card .cardC1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+  }
+  .card .cardC2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+  }
+
+  .card .cardC2 h3{
+    font-size: 2.5rem;
+  }
+
+  .card .cardC3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+  }
+
+  .botao a img{
+    margin-left: 50px;
+  }
+
+  .parallax-image {
+    justify-content: center;
+  }
+
+
+}

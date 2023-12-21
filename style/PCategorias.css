@@ -1,0 +1,138 @@
+body{
+  background-image: url('/images/vector1.png');
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+}
+
+main{
+  min-width: calc(100vh - 200px);
+}
+
+.conteiner{
+    margin: 10% auto 0 auto;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  width: 289px;
+  height: 356px;
+  flex-shrink: 0;
+  border-radius: 53px;
+  background: var(--laranjaCla);
+  border: none;
+  margin: 20px;
+}
+ 
+.cardCont{
+  width: var(--tam);
+}
+
+.card img{
+  width: 190px;
+  height: auto;
+  border-radius: 35px;
+}
+
+.card h3{
+  color: var(--marromCla);
+  text-align: center;
+  font-family: var(--fonte);
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.botao img{
+  width: 37px;
+  height: 40px;
+  border-radius: 0%;
+}
+
+.botao{
+  width: 155px;
+  background-color: var(--laranjaopc);
+  border-radius: 9px;
+  padding: 0 5px 0 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+  
+.botao > a, a:visited, a:active{
+  color: var(--marromCla);
+  font-size: 40px;
+  text-decoration: none;
+}
+
+@media (min-width: 768px){
+  .conteiner{
+    margin: 10% auto 0 auto;
+    background-color: aqua;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  width: 289px;
+  height: 356px;
+  flex-shrink: 0;
+  border-radius: 53px;
+  background: var(--laranjaCla);
+  border: none;
+  margin: 20px;
+}
+ 
+.cardCont{
+  width: var(--tam);
+}
+
+.card img{
+  width: 290px;
+  height: auto;
+  border-radius: 35px;
+}
+
+.card h3{
+  color: var(--marromCla);
+  text-align: center;
+  font-family: var(--fonte);
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.botao img{
+  width: 37px;
+  height: 40px;
+  border-radius: 0%;
+}
+
+.botao{
+  width: 155px;
+  background-color: var(--laranjaopc);
+  border-radius: 9px;
+  padding: 0 5px 0 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+  
+.botao > a, a:visited, a:active{
+  color: var(--marromCla);
+  font-size: 40px;
+  text-decoration: none;
+}
+
+}

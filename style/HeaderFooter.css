@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+:root {
+  --verde: #22783C;
+  --fonte: 'Just Another Hand', cursive;
+  --marromEsc: #331E06;
+  --laranjaopc: #FCD581;
+  --marromCla: #5B3A19;
+  --tamDes: 70%;
+  --tamMob: 85%;
+  --laranjaCla: #FFF8E8;
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte);
+}
+
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 2;
+}
+
+.navigation{
+  display: none;
+}
+
+.toggleBox {
+	filter: invert(0);
+  margin: 0 8%;
+}
+
+#toggleBtn{
+  width: 50px;
+  height: 50px;
+  transition: fill 0.5s;
+}
+
+.navigation.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	left: 50%;
+  font-family: var(--fonte), Helvetica, sans-serif;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #f7dda6;
+}
+
+.navigation.active a {
+	padding: 20px;
+	font-size: 1.95rem;
+	font-weight: 500;
+	text-decoration: none;
+  font-family: var(--fonte);
+  transition: 0.3s;
+  color: var(--verde);
+}
+
+.navigation.active > a:hover {
+  color: var(--marromEsc);
+}
+
+.titulo{
+color: var(--verde);
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.56px;
+transition: color 1s;
+width: 100%;
+}
+
+#page-header {
+  background-color: rgb(255 255 255 / 39%);
+  transition: background-color 1s;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  z-index: 99 !important;
+}
+
+.naveg {
+  display: flex;
+  justify-content: space-between;
+  /* d-flex flex-row align-items-center  descktop*/
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.naveg ul, li{
+list-style: none;
+}
+
+.naveg > ul li > a, a:visited, a:active{
+color: var(--verde);
+font-size: 37px;
+font-weight: 400;
+text-decoration: none;
+letter-spacing: 2px;
+}
+
+.mudarCor{
+color: white !important;
+transition: color 1s;
+}
+
+.naveg ul li button{
+margin-top: 11%;
+}
+
+.naveg form input, button{
+color: var(--verde) !important;
+border: 2px solid var(--verde);
+transition: border 2s;
+}
+
+.naveg form button{
+color: var(--verde) !important;
+background-color: var(--verde);
+}
+
+.listaCateg {
+  position: absolute;
+  padding: 0;
+  background-color: white;
+  border-radius: 5%;
+  border: 2px solid var(--verde);
+  box-shadow: 2px 2px 10px 1px rgb(6, 49, 6);
+  display: none;
+}
+
+.listaCategBlock{
+  display: block !important;
+}
+
+a{
+transition: color 1s;
+}
+
+form .proc{
+  font-size: 25px;
+  padding-left: 12px;
+}
+
+form{
+  padding-right: 32px;
+}
+
+.mudarProc{
+  border: 2px solid white !important;
+  transition: border 2s;
+}
+
+.rodape{
+  background-color: var(--verde);
+  height: 200px;
+  color: white;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.cont1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont1 h1{
+  margin: 20px;
+}
+
+.rodape img{
+  width: 150px;
+  height: auto;
+}
+
+.rodape hr{
+  /* width: var(--tam);  descktop*/
+  background-color: white;
+  height: 3px;
+}
+
+.rodape h4{
+  /* width: var(--tam);  descktop*/
+  letter-spacing: 0.99px;
+  text-align: center;
+}
+
+.rodape h1{
+  letter-spacing: 1.62px;
+  font-size: 50px;
+}
+
+@media (min-width: 768px){
+  .navigation{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .naveg {
+    width: 70%;
+  }
+
+  .naveg > ul li > a, a:visited, a:active{
+    font-size: 3rem;
+  }
+
+  #toggleBtn{
+    display: none;
+  }
+
+  .titulo{
+    font-size: 82px;
+  }
+
+  form input{
+    width: 200px;
+    height: 50px;
+    font-size: 3rem;
+  }
+
+  form button{
+    width: 60px;
+  }
+
+  form .proc{
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+  }
+
+  .rodape hr{
+    width: var(--tamDes);
+  }
+  
+  .rodape h4{
+    width: var(--tamDes);
+  }
+
+  .cont1{
+    flex-direction: row;
+    justify-content: space-around;
+    width: var(--tamDes);
+  }
+
+  .cont1 img{
+    width: 200px;
+    height: auto;
+  }
+
+  .rodape h4{
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+}
