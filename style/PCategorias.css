@@ -1,17 +1,19 @@
 body{
-  background-image: url('/images/vector1.png');
+  background-image: url('../images/vector1.png');
   background-color: white;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 100%;
   background-position-y: center;
+  padding: 0;
+  margin: 0;
 }
 
 main{
-  min-width: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
 }
 
 .topicos{
-  margin: 13% auto 0 auto;
+  margin: 35% auto 0 auto;
   height: 50%;
   display: flex;
   align-items: center;
@@ -24,10 +26,14 @@ main{
 .topicos a{
   text-align: center;
   font-family: var(--fonte);
-  font-size: 34px;
   width: 150px;
   background-color: var(--laranjaopc);
-  margin: 15px;
+  border-radius: 9px;
+  padding: 0 5px 0 5px;
+  color: var(--marromCla);
+  font-size: 40px;
+  text-decoration: none;
+  margin: 10px;
 }
 
   .conteiner{
@@ -43,8 +49,8 @@ main{
 .card{
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 296px;
+  width: 240px;
+  height: 346px;
   flex-shrink: 0;
   border-radius: 53px;
   background: var(--laranjaCla);
@@ -77,27 +83,34 @@ main{
   margin: 15px 0;
 }
 
+.botao{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .botao img{
   width: 36px;
   height: 39px;
   border-radius: 0%;
 }
 
-.botao{
-  width: 130px;
+.botao, #btnVerRec{
+  width: 180px;
   background-color: var(--laranjaopc);
   border-radius: 9px;
   padding: 0 5px 0 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-  
-.botao > a, a:visited, a:active{
+  border: none;
   color: var(--marromCla);
   font-size: 40px;
-  text-decoration: none;
 }
+  
+.botao #btnVerRec a, a:visited, a:active{
+  font-size: 40px;
+  text-decoration: none;
+  color: var(--marromCla);
+}
+
 
 @media (min-width: 768px){
   .conteiner{
@@ -110,11 +123,19 @@ main{
     flex-wrap: wrap;
 }
 
+.topicos{
+  margin: 13% auto 0 auto;
+}
+
+.topicos a{
+  font-size: 1.8rem;
+}
+
 .card{
   display: flex;
   align-items: center;
-  width: 289px;
-  height: 356px;
+  width: 239px;
+  height: 306px;
   flex-shrink: 0;
   border-radius: 53px;
   background: var(--laranjaCla);
@@ -127,7 +148,7 @@ main{
 }
 
 .card img{
-  width: 290px;
+  width: 238px;
   height: auto;
   border-radius: 35px;
 }
@@ -136,7 +157,6 @@ main{
   color: var(--marromCla);
   text-align: center;
   font-family: var(--fonte);
-  font-size: 36px;
   margin: 15px 0;
 }
 
@@ -145,13 +165,13 @@ main{
 }
 
 .botao img{
-  width: 37px;
-  height: 40px;
+  width: 30px;
+  height: 31px;
   border-radius: 0%;
 }
 
 .botao{
-  width: 155px;
+  width: 128px;
   background-color: var(--laranjaopc);
   border-radius: 9px;
   padding: 0 5px 0 5px;
@@ -160,10 +180,15 @@ main{
   align-items: center;
 }
   
-.botao > a, a:visited, a:active{
+.botao #btnVerRec{
   color: var(--marromCla);
-  font-size: 40px;
   text-decoration: none;
+  width: 71px;
+  background-color: var(--laranjaopc);
+  border-radius: 9px;
+  padding: 0px 2px;
+  border: none;
+  font-size: 30px;
 }
 
 }
