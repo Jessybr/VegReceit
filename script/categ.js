@@ -33,24 +33,6 @@ class Receita {
 
 Receita.instances = [];
 
-// const btnSub=document.getElementById("btnSub");
-
-// btnSub.addEventListener("click", ()=>{
-//     let nome=document.getElementById("nome").value;
-//     let tempo=document.getElementById("tempo").value;
-//     let rendi=document.getElementById("rendi").value;
-//     let dific=document.getElementById("dific").value;
-//     let ingred=document.getElementById("ingred").value;
-//     let modo=document.getElementById("modo").value;
-//     let categ=document.getElementById("categ").value;
-//     let imag=document.getElementById("imag").value;
-   
-//     let novaRes = new Receita(nome, tempo, rendi, dific, ingred, modo, categ, imag);
-
-// })
-
-
-
 const ingredTofu = ["500g de tofu em cubos", "3 colheres (sopa) de farinha de trigo", "2 colheres (sopa) de óleo de soja", "2 cenouras raladas grosseiramente", "1 xícara (chá) de vagem em pedaços", "1 pimentão vermelho em tiras", "2 colheres (sopa) de molho de soja (shoyu)", "Sal e pimenta-do-reino a gosto", "Cebolinha verde para decorar", "Gergelim branco torrado para polvilhar"];
 const tofu = new Receita("Tofú Oriental com Vegetais", "30 minutos", "6 porções", "Fácil", ingredTofu, "Passe o tofu na farinha de trigo...", "Pratos Quentes", "tofu-oriental-vegetais");
 
@@ -76,13 +58,27 @@ const ingreChoq = ["500 ml de leite vegetal de sua preferência", "2 colheres de
 const choq = new Receita("Chocolate quente vegano", "15 minutos", "2 porções", "Fácil", ingrePanqueca, "Em uma panela, coloque o leite, o amido de milho e misture bem até dissolver.", "Bebidas", "chocolate-quente");
 
 let todasReceitas = Receita.getInstances();
-let cardsHTML = "";
 
-todasReceitas.forEach(el => {
+let cardsHTML = '';
+let receita_PQ = '';
+let receita_AP = '';
+let receita_BD = '';
+let receita_SB = '';
+
+todasReceitas.forEach((el) => {
     el.card();
     cardsHTML += conteiner.innerHTML;
+    if (el.categ === "Pratos Quentes") {
+        receita_PQ += el;
+    } else if (el.categ === "Aperitivos") {
+        receita_AP += el;
+    } else if (el.categ === "Bebidas") {
+        receita_BD += el;
+    } else if (el.categ === "Sobremesas") {
+        receita_SB += el;
+    }
 });
+
 
 conteiner.innerHTML = cardsHTML;
 
-console.log(todasReceitas);

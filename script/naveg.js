@@ -30,16 +30,18 @@ window.addEventListener("scroll", ()=>{
 
 
   // Aqui quando clica no botão "Categoria" aparece a lista
-  const listaCateg=document.querySelector(".listaCateg")
-  Categ.addEventListener("mouseover", (evt)=>{
-    listaCateg.classList.add("listaCategBlock")
-  })
-  Categ.addEventListener("mouseout", (evt)=>{
-    listaCateg.classList.remove("listaCategBlock")
-  })
-  listaCateg.addEventListener("mouseover", (evt)=>{
-    listaCateg.classList.add("listaCategBlock")
-  })
+  // const listaCateg=document.querySelector(".listaCateg")
+  // Categ.addEventListener("mouseover", (evt)=>{
+  //   listaCateg.classList.add("listaCategBlock")
+  // })
+
+  // Categ.addEventListener("mouseout", (evt)=>{
+  //   listaCateg.classList.remove("listaCategBlock")
+  // })
+
+  // listaCateg.addEventListener("mouseover", (evt)=>{
+  //   listaCateg.classList.add("listaCategBlock")
+  // })
 
   
 
